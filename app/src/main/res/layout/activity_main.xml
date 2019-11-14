@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:textColor="@color/transparentWhite"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:background="@android:color/transparent"
         android:text="next" />
 </RelativeLayout>
