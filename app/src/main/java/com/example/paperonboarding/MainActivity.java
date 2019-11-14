@@ -1,5 +1,6 @@
 package com.example.paperonboarding;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.View;
@@ -106,12 +107,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.btn_next:
-                viewPager.setCurrentItem(mCurrentPage+1);
+                if (mCurrentPage ==  2) {
+                    startActivity(new Intent(MainActivity.this, Main2Activity.class));
+                }
+                viewPager.setCurrentItem(mCurrentPage + 1);
                 break;
             case R.id.btn_back:
-                viewPager.setCurrentItem(mCurrentPage-1);
+                viewPager.setCurrentItem(mCurrentPage - 1);
                 break;
         }
     }
